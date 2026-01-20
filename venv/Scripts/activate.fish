@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV 'C:\Users\HP\OneDrive - ULEAM\Documentos\DSMN\BASE DE DATOS\taller django\venv'
+set -gx VIRTUAL_ENV 'C:\Users\ElLocoAragundi\Documents\taller81alex\venv'
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"Scripts $PATH
