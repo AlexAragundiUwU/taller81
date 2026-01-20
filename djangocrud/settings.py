@@ -3,7 +3,7 @@ import dj_database_url
 from pathlib import Path
 
 # Construye las rutas dentro del proyecto
-BASE_DIR = Path(_file_).resolve().parent.parent
+BBASE_DIR = Path(__file__).resolve().parent.parent
 
 # SEGURIDAD: Usa la clave del entorno en Render, o una por defecto en local
 SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-key")
