@@ -1,9 +1,10 @@
-import os
-import dj_database_url
 from pathlib import Path
+import os
+import dj_database_url  # <--- IMPORTANTE: Añadida esta línea
 
-# Construye las rutas dentro del proyecto
-BBASE_DIR = Path(__file__).resolve().parent.parent
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+# Se corrigió a doble guion bajo __file__
+BASE_DIR = Path(__file__).resolve().parent.parent 
 
 # SEGURIDAD: Usa la clave del entorno en Render, o una por defecto en local
 SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-key")
@@ -61,8 +62,7 @@ TEMPLATES = [
 WSGI_APPLICATION = "djangocrud.wsgi.application"
 
 # BASE DE DATOS HÍBRIDA
-# Si hay DATABASE_URL (Render), usa PostgreSQL.
-# Si no (Tu PC), usa SQLite.
+# Si hay DATABASE_URL (Render), usa PostgreSQL. Si no (Tu PC), usa SQLite.
 DATABASES = {
     'default': dj_database_url.config(
         default='sqlite:///db.sqlite3',
